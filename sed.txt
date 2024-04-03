@@ -1,0 +1,106 @@
+sed 's/sales/accountant/' Text1.txt OUTPUT:
+
+1 ATUKURI 100 18 manager
+2 MAITHILI 200 19 clerk
+3 MAHESH 300 20 manager
+4 MALYADRI 400 21 accountant
+5 SAILAJA 500 22 account
+6 NAVYA 600 23 accountant
+7 SHREYA 700 24 peon
+8 NITISH 800 25 accountant
+9 NADISH 900 26 assistant
+10 SANDY 1000 27 manager
+
+sed 's/sales/accountant/g' Text1.txt OUTPUT:
+
+1 ATUKURI 100 18 manager
+2 MAITHILI 200 19 clerk
+3 MAHESH 300 20 manager
+4 MALYADRI 400 21 accountant
+5 SAILAJA 500 22 account
+6 NAVYA 600 23 accountant
+7 SHREYA 700 24 peon
+8 NITISH 800 25 accountant
+9 NADISH 900 26 assistant
+10 SANDY 1000 27 manager
+
+sed '8s/sales/accountant/' Text1.txt OUTPUT:
+
+1 ATUKURI 100 18 manager
+2 MAITHILI 200 19 clerk
+3 MAHESH 300 20 manager
+4 MALYADRI 400 21 accountant
+5 SAILAJA 500 22 account
+6 NAVYA 600 23 accountant
+7 SHREYA 700 24 peon
+8 NITISH 800 25 accountant
+9 NADISH 900 26 assistant
+10 SANDY 1000 27 manager
+
+sed '8s/sales/accountant/p' Text1.txt OUTPUT:
+
+1 ATUKURI 100 18 manager
+
+2 MAITHILI 200 19 clerk
+3 MAHESH 300 20 manager
+4 MALYADRI 400 21 accountant
+5 SAILAJA 500 22 account
+6 NAVYA 600 23 accountant
+7 SHREYA 700 24 peon
+8 NITISH 800 25 accountant
+8 NITISH 800 25 accountant
+9 NADISH 900 26 assistant
+10 SANDY 1000 27 manager
+
+sed -n '8s/sales/accountant/' Text1.txt OUTPUT:
+
+8 NITISH 800 25 accountant
+
+sed '5d' Text1.txt OUTPUT :
+
+1 ATUKURI 100 18 manager
+2 MAITHILI 200 19 clerk
+3 MAHESH 300 20 manager
+4 MALYADRI 400 21 accountant
+6 NAVYA 600 23 accountant
+7 SHREYA 700 24 peon
+8 NITISH 800 25 accountant
+9 NADISH 900 26 assistant
+10 SANDY 1000 27 manager
+
+sed '' Text1.txt OUTPUT :
+
+1 ATUKURI 100 18 manager
+2 MAITHILI 200 19 clerk
+
+3 MAHESH 300 20 manager
+4 MALYADRI 400 21 accountant
+5 SAILAJA 500 22 account
+6 NAVYA 600 23 accountant
+7 SHREYA 700 24 peon
+8 NITISH 800 25 accountant
+9 NADISH 900 26 assistant
+
+sed '3,7d' Text1.txt OUTPUT :
+
+1 ATUKURI 100 18 manager
+2 MAITHILI 200 19 clerk
+8 NITISH 800 25 accountant
+9 NADISH 900 26 assistant
+10 SANDY 1000 27 manager
+
+sed '3,' Text1.txt OUTPUT :
+
+1 ATUKURI 100 18 manager
+2 MAITHILI 200 19 clerk
+
+sed '/manager/d' Text1.txt OUTPUT :
+
+2 MAITHILI 200 19 clerk
+3 MAHESH 300 20 manager
+4 MALYADRI 400 21 accountant
+5 SAILAJA 500 22 account
+6 NAVYA 600 23 accountant
+7 SHREYA 700 24 peon
+8 NITISH 800 25 accountant
+9 NADISH 900 26 assistant

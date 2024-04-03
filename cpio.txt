@@ -1,0 +1,16 @@
+cpio -ov < Text1.txt > archive OUTPUT:
+cpio: 1 ATUKURI 100 18 manager: Cannot stat: No such file or directory
+cpio: 2 MAITHILI 200 19 clerk: Cannot stat: No such file or directory
+cpio: 3 MAHESH 300 20 manager: Cannot stat: No such file or directory
+cpio: 4 MALYADRI 400 21 sales: Cannot stat: No such file or directory
+cpio: 5 SAILAJA 500 22 account: Cannot stat: No such file or directory
+cpio: 6 NAVYA 600 23 sales: Cannot stat: No such file or directory
+cpio: 7 SHREYA 700 24 peon : Cannot stat: No such file or directory
+cpio: 8 NITISH 800 25 sales: Cannot stat: No such file or directory
+cpio: 9 NADISH 900 26 assistant: Cannot stat: No such file or directory
+cpio: 10 SANDY 1000 27 manager: Cannot stat: No such file or directory
+1 block
+
+cpio -iv < archive OUTPUT:
+
+1 blocK

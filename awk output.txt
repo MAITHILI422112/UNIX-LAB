@@ -1,0 +1,89 @@
+awk '{print}' Text1.txt OUTPUT:
+1 ATUKURI 100 19 manager
+
+2 MAITHILI 200 18 clerk
+3 MAHESH 300 20 manager
+4 MALYADRI 400 21 sales
+5 SAILAJA 500 22 account
+6 NAVYA 600 23 sales
+7 SHREYA 700 24 peon
+8 NITISH 800 25 clerk
+9 NADISH 900 26 assistant
+10 SANDY 1000 27 manager
+
+awk '/manager/{print}' Text1.txt OUTPUT:
+
+1 ATUKURI 100 18 manager
+3 MAHESH 300 20 manager
+10 SANDY 1000 27 manager
+awk '{print ,}' Text1.txt OUTPUT:
+ATUKURI manager
+MAITHILI clerk
+MAHESH manager
+MALYADRI sales
+SAILAJA account
+NAVYA sales
+SHREYA peon
+NITISH clerk
+NADISH assistant
+SANDY manager
+
+awk '{sum += } END { print sum }' Text1.txt OUTPUT:
+
+5500
+
+awk '{sum += } END { print sum / NR }' Text1.txt OUTPUT:
+
+550
+
+awk '{ print substr(,2,4) }' Text1.txt OUTPUT:
+
+TUKU
+AITH
+AHES
+ALYA
+AILA
+AVYA
+HREY
+ITIS
+ADIS
+ANDY
+
+awk '{ print }' Text1.txt OUTPUT:
+
+manager
+clerk
+manager
+sales
+account
+sales
+peon
+clerk
+assistant
+manager
+
+awk '{ if ( > 500) { print senior } else { print junior} }' Text1.txt OUTPUT:
+
+junior
+junior
+junior
+junior
+junior
+senior
+senior
+senior
+senior
+senior
+
+awk 'function cube(x) { return x*x*x } {print cube() }' Text1.txt OUTPUT:
+
+1000000
+8000000
+27000000
+64000000
+125000000
+216000000
+343000000
+512000000
+729000000
+1000000000
